@@ -2,11 +2,6 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-[chatgpt-desktop-bin]
-source = "regex"
-url = "https://persistent.oaistatic.com/codex-app-prod/linux/deb/dists/stable/main/binary-amd64/Packages"
-regex = '''Version:\s*([0-9.]+)'''
-
 [feather-wallet]
 source = "github"
 github = "feather-wallet/feather"
