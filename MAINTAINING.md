@@ -2,9 +2,11 @@
 
 ## Repository model
 
-The AUR stores one Git repository per `pkgbase`. This monorepo keeps each
-package in a top-level directory and connects its standalone history to the
-main repository with `git subtree`.
+This monorepo keeps official Arch packaging, AUR packages, and local packages
+in separate top-level directories. Packages need not be published to the AUR.
+For packages imported with their standalone history, `git subtree` connects
+that history to the main repository. The AUR stores one Git repository per
+`pkgbase`; the AUR procedures below apply only to packages published there.
 
 The directories are ordinary tracked files, not nested repositories or Git
 submodules. Subtree import commits connect the original package history to the

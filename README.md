@@ -1,9 +1,9 @@
-# CodeFriendly AUR packages
+# CodeFriendly Arch packages
 
-This repository collects CodeFriendly’s Arch User Repository packaging work. It
-includes packages we maintain and local fixes for outdated or broken AUR
-packages. Inclusion does not imply that CodeFriendly is the current AUR
-maintainer.
+This repository collects CodeFriendly’s Arch Linux packaging work, including
+official Arch packaging, AUR packages, and local packages and fixes. Packages
+here are not necessarily published to the AUR. Inclusion does not imply that
+CodeFriendly is the current AUR maintainer.
 
 ## Packages
 
@@ -11,9 +11,10 @@ maintainer.
 | --- | --- |
 | `chatgpt-desktop-bin` | Local package for OpenAI's official Linux desktop build |
 | [`feather-wallet`](https://aur.archlinux.org/packages/feather-wallet) | Compatibility and build fixes |
+| `picard` | Official Arch packaging for local builds |
 | [`sononym`](https://aur.archlinux.org/packages/sononym) | Packaging and version updates |
 
-Versions here may include fixes that have not yet been published to the AUR.
+Versions here may differ from those published in Arch repositories or the AUR.
 
 ## Contributing
 

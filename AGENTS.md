@@ -1,6 +1,6 @@
 # Repository guidance
 
-This repository contains multiple Arch User Repository packages, each in its
+This repository contains multiple Arch Linux packages, each in its
 own top-level directory. Keep package changes scoped to the relevant package.
 
 ## Checking for upstream updates

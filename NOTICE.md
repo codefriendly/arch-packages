@@ -8,8 +8,9 @@ The MIT License in [LICENSE](LICENSE) applies to repository-level tooling and
 documentation authored by CodeFriendly, including the scripts under
 `_scripts/`.
 
-Package directories contain histories imported from the Arch User Repository
-and may include work by multiple contributors. Those contributions retain their
+Package directories may contain material imported from official Arch packaging
+repositories or the Arch User Repository, including work by multiple
+contributors. Those contributions retain their
 original copyright and licensing terms. The repository-level MIT License does
 not replace or override those terms.
 
