@@ -11,3 +11,9 @@ use_latest_release = true
 source = "regex"
 url = "https://www.sononym.net/download/"
 regex = '''sononym-([0-9.]+)\.tar\.bz2'''
+
+[picard]
+source = "git"
+git = "https://github.com/metabrainz/picard.git"
+include_regex = 'release-((?:\d|\.)+)'
+prefix = "release-"
