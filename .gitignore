@@ -1,3 +1,9 @@
 .pi-subagents/
 old_ver.json
 new_ver.json
+
+# makepkg outputs in top-level package directories
+/[!._]*/src/
+/[!._]*/pkg/
+/[!._]*/*.tar.*
+/[!._]*/*.log
