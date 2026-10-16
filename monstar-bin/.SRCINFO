@@ -1,0 +1,21 @@
+pkgbase = monstar-bin
+	pkgdesc = wayland terminal based on libghostty
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = https://github.com/rockorager/monstar
+	arch = x86_64
+	license = MIT
+	depends = wayland
+	depends = fontconfig
+	depends = freetype2
+	depends = harfbuzz
+	depends = libxkbcommon
+	depends = dbus
+	optdepends = noto-fonts-emoji: emoji support
+	optdepends = noto-fonts-cjk: CJK font support
+	provides = monstar
+	conflicts = monstar
+	source = monstar-1.0.1-x86_64-linux.tar.gz::https://github.com/rockorager/monstar/releases/download/v1.0.1/monstar-1.0.1-x86_64-linux.tar.gz
+	sha256sums = 271fcf68d3e67350327eba43c061f0bd904ec4e5a7049ee60d7c9e79991d4bbc
+
+pkgname = monstar-bin
