@@ -12,14 +12,14 @@ Date: Tue, 20 Jan 2026 11:19:30 +1100
 Subject: [PATCH] update wrapper for arch
 
 ---
- helium-wrapper | 58 +++++++++++++++++++++++++++++++++++++++++++++++---
- 1 file changed, 55 insertions(+), 3 deletions(-)
+ helium-wrapper | 41 ++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 38 insertions(+), 3 deletions(-)
 
 diff --git a/helium-wrapper b/helium-wrapper
 index d8c6150..c1ad5be 100755
 --- a/helium-wrapper
 +++ b/helium-wrapper
-@@ -1,17 +1,69 @@
+@@ -1,17 +1,52 @@
 -#!/bin/sh
 +#!/usr/bin/env bash
  # Copyright 2025 The Helium Authors
@@ -46,28 +46,11 @@ index d8c6150..c1ad5be 100755
 +append_flags_file() {
 +  local file="$1"
 +  [[ -r "$file" ]] || return 0
-+  local line safe_line
-+  # Filter comments & blank lines
-+  while IFS= read -r line; do
++  local line
++  # One literal argument per line; shell quoting and expansion are not used.
++  while IFS= read -r line || [[ -n "$line" ]]; do
 +    [[ "$line" =~ ^[[:space:]]*(#|$) ]] && continue
-+    # Sanitise: block command substitution; prevent $VAR and ~ expansion
-+    case "$line" in
-+      *\$\(*|*\`*)
-+        echo "Warning: ignoring unsafe line in $file: $line" >&2
-+        continue
-+        ;;
-+    esac
-+    # Disable globbing during eval
-+    set -f
-+    # Prevent $VAR and ~ expansion while allowing eval to parse quotes & escapes
-+    safe_line=${line//$/\\$}
-+    safe_line=${safe_line//~/\\~}
-+    eval "set -- $safe_line"
-+    # Enable globbing for rest of the script
-+    set +f
-+    for token in "$@"; do
-+      FLAGS+=("$token")
-+    done
++    FLAGS+=("$line")
 +  done < "$file"
 +}
 +

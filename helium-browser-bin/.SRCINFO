@@ -1,15 +1,7 @@
-# Maintainer: Sam Sinclair <sam at playleft dot com>
-# Contributor: Pujan Modha <pujan.pm@hotmail.com>
-# Contributor: init_harsh
-# /*
-#  * SPDX-FileCopyrightText: 2025 Arch Linux Contributors
-#  *
-#  * SPDX-License-Identifier: 0BSD
-#  */
 pkgbase = helium-browser-bin
 	pkgdesc = Private, fast, and honest web browser based on Chromium (Latest/Stable)
 	pkgver = 0.19.3.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/imputnet/helium-linux
 	arch = x86_64
 	arch = aarch64
@@ -39,7 +31,7 @@ pkgbase = helium-browser-bin
 	source = 0002-align-desktop-entry.patch
 	source = LICENSE.ungoogled_chromium::https://raw.githubusercontent.com/imputnet/helium-linux/0.19.3.1/LICENSE.ungoogled_chromium
 	validpgpkeys = BE677C1989D35EAB2C5F26C9351601AD01D6378E
-	sha256sums = 3846be557da5202267fc4d8a45572f4cedcd95e82d4e62e998c4486fed311314
+	sha256sums = 1e12a523f42c46d2617193d5dbf2d4bdf0e2869df91ad91994d645ab12a19f29
 	sha256sums = b1253d30764b6586b05161b793b728ffee442cebf875e2074eedf2da5140036f
 	sha256sums = 9539b394e4179952698894bd62ef6566b6804ab0ff360dcf3a511cfaf7f78c4d
 	source_x86_64 = helium-0.19.3.1-x86_64_linux.tar.xz::https://github.com/imputnet/helium-linux/releases/download/0.19.3.1/helium-0.19.3.1-x86_64_linux.tar.xz
