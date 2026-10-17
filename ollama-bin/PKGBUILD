@@ -3,7 +3,7 @@
 pkgbase=ollama-bin
 pkgname=(ollama-bin ollama-cuda12-bin ollama-cuda13-bin ollama-vulkan-bin)
 pkgver=0.40.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Create, run and share large language models (LLMs)"
 
 arch=('x86_64' 'aarch64')
@@ -22,8 +22,6 @@ optdepends=("ollama-cuda12: NVIDIA GPU Support"
             "ollama-cuda13: NVIDIA GPU Support"
             "ollama-vulkan: GPU Support")
 
-install="ollama.install"
-
 source=("LICENSE-${pkgver}::${_urlraw}/LICENSE"
         "README-${pkgver}.md::${_urlraw}/README.md"
         "ollama.conf"
@@ -33,8 +31,7 @@ source=("LICENSE-${pkgver}::${_urlraw}/LICENSE"
         "ollama-cuda.service"
         "ollama-vulkan.service"
         "sysusers.conf"
-        "tmpfiles.d"
-        "ollama.install")
+        "tmpfiles.d")
 source_x86_64=("ollama-${arch[0]}-${pkgver}.tzst::${url}/releases/download/v${pkgver}/ollama-linux-${_barch[0]}.tar.zst")
 source_aarch64=("ollama-${arch[1]}-${pkgver}.tzst::${url}/releases/download/v${pkgver}/ollama-linux-${_barch[1]}.tar.zst")
 sha256sums=('5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226'
@@ -46,8 +43,7 @@ sha256sums=('5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226'
             '138f38a3ab5582d7a2f9f21c98a8a1112e3afb767e32cc348cb320938874104b'
             '1e471f14e3e423ee2a5b36c4c948801a20bb91586a821b751ae46913eeb99a7f'
             '14e2e267be85b6943f66dfe60e73f5e0a611eaf40ee69a4cc0d497d071392cf4'
-            '137e1d50a5f3058c30a73b7bb3c323888d225e6a7ae47564be869827db0659a3'
-            'c45babd58b56b10ece2c652b67ca3104ed0ceaf4d6041b846be4e71dbd669c2d')
+            '137e1d50a5f3058c30a73b7bb3c323888d225e6a7ae47564be869827db0659a3')
 sha256sums_x86_64=('dc5eabc292f9949546c90a97c820f924b035e05243b0de13c7f366182562169c')
 sha256sums_aarch64=('fbe71ebb1a10e59b8480c4d2839826b5f9dff1a6d5c142428b2e7db9b1a2c642')
 
