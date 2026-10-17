@@ -1,9 +1,8 @@
 pkgbase = diskwatch
 	pkgdesc = Single-host, read-only disk diagnostics TUI - eight tabs across devices, volumes, filesystems, IO, SMART, hot files, and insights
 	pkgver = 0.6.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/matthart1983/diskwatch
-	install = diskwatch.install
 	arch = x86_64
 	arch = aarch64
 	license = MIT

@@ -13,7 +13,7 @@ pkgname=${_cratename}
 pkgdesc="Single-host, read-only disk diagnostics TUI - eight tabs across devices, volumes, filesystems, IO, SMART, hot files, and insights"
 
 pkgver=0.6.0
-pkgrel=1
+pkgrel=2
 _pkgvername=${pkgver}
 
 arch=('x86_64' 'aarch64')
@@ -27,8 +27,6 @@ makedepends=('rust' 'cargo' 'nasm')
 depends=('glibc' 'libgcc' 'smartmontools')
 
 provides=("${_appname}")
-
-install="${_appname}.install"
 
 options=('!lto' '!strip')
 
