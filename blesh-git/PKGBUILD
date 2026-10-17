@@ -19,7 +19,7 @@ pkgname=blesh-git
 _pkgname=ble.sh
 pkgdesc="Bash Line Editor (ble.sh) -- a replacement for Bash's line editor with enhanced features"
 pkgver=0.4.0_devel4.r2113.70a325f9
-pkgrel=1
+pkgrel=2
 license=(BSD-3-Clause)
 provides=(blesh)
 conflicts=(blesh)
@@ -44,7 +44,7 @@ arch=(any)
 source=("git+$url" "git+${url/%.sh/sh-contrib}" 'blesh-update.sh')
 md5sums=('SKIP'
          'SKIP'
-         'cfe4b50a3b3c66a69af64059fb4a7683')
+         'df4454a29464f8b89ecba00f9d37e296')
 install=blesh.install
 
 pkgver() {
@@ -65,7 +65,7 @@ prepare() {
 }
 
 package() {
-  # Makes ble-update call an AUR helper
+  # Keep ble-update from bypassing the reviewed repository packaging
   install -Dm644 blesh-update.sh "$pkgdir"/usr/share/blesh/lib/_package.sh
   cd "$_pkgname"
   make install DESTDIR="$pkgdir" PREFIX=/usr INSDIR_LICENSE="$pkgdir/usr/share/licenses/blesh"

@@ -1,7 +1,7 @@
 pkgbase = blesh-git
 	pkgdesc = Bash Line Editor (ble.sh) -- a replacement for Bash's line editor with enhanced features
 	pkgver = 0.4.0_devel4.r2113.70a325f9
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/akinomyoga/ble.sh
 	install = blesh.install
 	arch = any
@@ -17,6 +17,6 @@ pkgbase = blesh-git
 	source = blesh-update.sh
 	md5sums = SKIP
 	md5sums = SKIP
-	md5sums = cfe4b50a3b3c66a69af64059fb4a7683
+	md5sums = df4454a29464f8b89ecba00f9d37e296
 
 pkgname = blesh-git
