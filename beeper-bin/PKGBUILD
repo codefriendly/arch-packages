@@ -6,7 +6,7 @@ _install_path='opt'
 
 pkgname='beeper-bin'
 pkgver=4.3.209
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc='The ultimate messaging app'
 depends=('libappindicator' 'libnotify' 'libsecret' 'hicolor-icon-theme')
@@ -83,7 +83,7 @@ Type=Application
 Name=Beeper
 GenericName=Unified Messenger
 Comment=$pkgdesc
-Exec=beeper --no-sandbox %U
+Exec=beeper %U
 Icon=beepertexts
 Terminal=false
 StartupWMClass=BeeperTexts
